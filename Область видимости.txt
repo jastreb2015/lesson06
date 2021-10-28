@@ -1,0 +1,17 @@
+'use strict';
+
+let y = 10;
+function one(x, z) {
+	lexicalEnvironment = {x: 3, z: undifined};
+	scope = globalScope = window.y = 10;
+	console.log(x, y, z);
+
+	function two() {
+	  lexicalEnviroment = {};
+	  scope = one.lexicalEnviroment = {x: 3, z: undifined}
+	  console.log(y);
+	}
+	two();
+}
+
+  one(3);
